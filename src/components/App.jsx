@@ -86,7 +86,8 @@ getVisibleContacts = () => {
         </div> 
     </div>
   );
-};
+  };
+  // test
   
 
 
