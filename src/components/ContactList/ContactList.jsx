@@ -1,5 +1,4 @@
 import React from 'react';
-import { IoPersonRemove } from 'react-icons/io5';
 import { Btn, Item, List } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDelete }) => {

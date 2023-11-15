@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import css from './App.module.css';
 import { ContactForm } from './ContactForm/ContactForm';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import Filter from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 const notifyOptions = {
