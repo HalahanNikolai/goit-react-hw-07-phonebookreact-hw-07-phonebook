@@ -5,7 +5,7 @@ import { LabelWrapper } from 'components/ContactForm/ContactForm.styled';
 import PropTypes from 'prop-types';
 
 const Filter = ({ value, onChange }) => (
-  <LabelDescr>
+  <LabelDescr >
     <LabelWrapper>
       <BsSearch size="16" /> Find contacts by name
     </LabelWrapper>
