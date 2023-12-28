@@ -18,8 +18,8 @@ export const Item = styled.li`
   align-items: center;
   gap: 16px;
 
-  color: ${p => p.theme.colors.text};
-  text-shadow: 0.5px 0.5px 0.5px #fff;
+  color: ${props => props.theme.colors.black};
+  text-shadow: ${props => props.theme.shadows.textShadow};
   font-size: ${props => props.theme.fontSizes.s};
 `;
 
@@ -33,24 +33,36 @@ export const Btn = styled.button`
   outline: none;
   border-radius: 8px;
 
-  color: ${p => p.theme.colors.black};
-  background-color: ${p => p.theme.colors.muted};
-cursor: pointer;
-  :hover,
-  :focus {
-    background-color: ${p => p.theme.colors.secondary};
+  color: ${props => props.theme.colors.black};
+  background-color: ${p => p.theme.colors.background};
+  /* box-shadow: ${p => p.theme.shadows.boxShadow};
+  transition: all 0.2s ease-in-out; */
+   background-color: ${p => p.theme.colors.muted};
 
-    color: ${p => p.theme.colors.text};
+  &:hover,
+  &:focus {
+      background-color: ${p => p.theme.colors.secondary};
+    /* box-shadow: inset -1px -1px 1px #ffffff, inset 1px 1px 1px #a8d5e7; */
+ color: ${p => p.theme.colors.text};
     text-shadow: 1px 1px 1px #fff;
 
     box-shadow: -2px -2px 2px #fff, 2px 2px 2px #4b1414;
+    /* svg {
+      fill: ${p => p.theme.colors.primary};
+      stroke: ${p => p.theme.colors.black};
+    } */
 
-    :active {
-      color: ${p => p.theme.colors.text};
+  }
+
+  &:active {
+    /* background-color: ${p => p.theme.colors.accent}; */
+    /* svg {
+      fill: ${p => p.theme.colors.black};
+      stroke: ${p => p.theme.colors.white};
+    } */
+     color: ${p => p.theme.colors.text};
       text-shadow: 1px 1px 1px #fff;
 
       box-shadow: inset 1px 1px 1px #4b1414, inset -1px -1px 1px #fff;
-
-    }
   }
 `;

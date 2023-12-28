@@ -1,1 +1,3 @@
-# goit-react-hw-03-phonebook
+# Contact Book
+
+State management using the Redux Toolkit library
