@@ -1,13 +1,15 @@
-import { Title } from 'components/Title/Title';
-import { SectionWrapper } from './Section.styled';
+import React from 'react';
+import { SectionWrap, SectionContainer, SectionTitle } from './Section.styled';
 
-export const Section = ({ title, children }) => {
+const Section = ({ title, children }) => {
   return (
-    <SectionWrapper>
-      <Title title={title} />
-      {children}
-    </SectionWrapper>
+    <SectionWrap>
+      <SectionContainer>
+        <SectionTitle>{title}</SectionTitle>
+        {children}
+      </SectionContainer>
+    </SectionWrap>
   );
 };
 
-
+export default Section;

@@ -1,30 +1,23 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/filter/filter-slice';
-import { getFilter } from 'redux/filter/filter-selectors';
+import { setQueryFilter } from 'redux/filterSlice';
+import { FilterInput } from './Filter.styled';
+import { useDispatch } from 'react-redux';
 
-import { BsSearch } from 'react-icons/bs';
-import { LabelWrapper, Input, LabelDescr, LabelSpan } from './Filter.styled';
-
-export const Filter = () => {
-  const filter = useSelector(getFilter);
+function Filter() {
   const dispatch = useDispatch();
 
-  const changeFilter = e => {
-    dispatch(setFilter(e.target.value.toLowerCase().trim()));
+  const handleInputChange = event => {
+    const newValue = event.target.value;
+    dispatch(setQueryFilter(newValue));
   };
 
   return (
-    <LabelDescr>
-      <LabelWrapper>
-        <BsSearch size="16" />
-        <LabelSpan>Find contacts by name</LabelSpan>
-      </LabelWrapper>
-      <Input
-        type="text"
-        value={filter}
-        onChange={changeFilter}
-        placeholder="Search..."
-      />
-    </LabelDescr>
+    <FilterInput
+      type="text"
+      name="filter"
+      placeholder="Search by name"
+      onChange={handleInputChange}
+    />
   );
-};
+}
+
+export default Filter;

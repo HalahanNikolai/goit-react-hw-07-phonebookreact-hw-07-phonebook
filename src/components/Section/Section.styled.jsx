@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
-export const SectionWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: ${props => props.theme.space[4]}px;
-  padding-bottom: ${props => props.theme.space[4]}px;
+export const SectionWrap = styled.section`
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: left;
+`;
 
-  max-width: 100%;
-  width: 600px;
+export const SectionContainer = styled.div`
+  width: 520px;
+  margin: 0 auto;
+  padding: 32px;
+  color: rgb(94, 151, 120); 
+  background-color: rgba(75, 195, 250, 0.255);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`;
 
-  background-color: #4bc3fa41;
-  text-shadow: 1px 1px 0 #fff;
-  box-shadow: -0.5px -0.5px 0.5px #fff, 1px 1px 1px #babecc;
- 
+export const SectionTitle = styled.h1`
+  font-size: 32px;
+  letter-spacing: 3px;
+  text-align: center;
 `;

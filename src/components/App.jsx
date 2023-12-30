@@ -1,34 +1,21 @@
-import { useSelector } from 'react-redux';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Section from './Section/Section';
+import ContactForm from './ContactForm/ContactForm';
+import Filter from './Filter/Filter';
+import ContactList from './ContatctsList/ContactsList';
 
-import { GlobalStyle } from 'styles/GlobalStyle';
-import { Layout } from './Layout/Layout';
-import { Section } from './Section/Section';
-import { Title } from './Title/Title';
-import { Filter } from './Filter/Filter';
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-
-import { getContacts } from 'redux/contacts/contacts-selectors';
-
-export const App = () => {
-  const contacts = useSelector(getContacts);
+const App = () => {
   return (
-    <Layout>
-      <Section title="PhoneBook">
-        <ContactForm />
-        {contacts.length > 0 && (
-          <>
-            <Title title="Contacts" />
-            <Filter />
-            <ContactList />
-          </>
-        )}
-      </Section>
-      <ToastContainer />
-      <GlobalStyle />
-    </Layout>
+    <Section title="Phonebook">
+      <ContactForm></ContactForm>
+      <h2 style={{
+        margin: '0 auto',
+        padding: '20px 0',
+        textAlign: 'center',
+      }}>Contacts</h2>
+      <Filter></Filter>
+      <ContactList></ContactList>
+    </Section>
   );
 };
-//temp
+
+export default App;
