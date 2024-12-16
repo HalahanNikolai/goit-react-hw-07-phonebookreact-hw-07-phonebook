@@ -25,10 +25,10 @@ const handleFulfieldAddContact = (state, { payload }) => {
   state.items.push(payload);
 };
 
-const handleFulfieldDeleteContact = (state, { payload }) => {
-  const index = state.items.findIndex(contact => contact.id === payload);
+const handleFulfieldDeleteContact = (state, action) => {
   state.isLoading = false;
-  state.items.splice(index, 1);
+  state.items = state.items.filter(item => item.id !== action.payload.id)
+
 };
 
 const contactsSlice = createSlice({
